@@ -144,7 +144,7 @@ a {
 .section-container {
     max-width: 75rem;
     margin: 0 auto;
-    padding: 2.5rem 1.25rem;
+    padding: 0 1.25rem;
 }
 
 .btn {
@@ -163,6 +163,7 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 2.5rem;
 }
 
 .page-logo {
