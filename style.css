@@ -380,7 +380,7 @@ p {
     width: 0.375rem;
     height: 0.375rem;
     border-radius: 50%;
-    border: 1px solid var(--clr-bright-red);
+    border: 0.0625rem solid var(--clr-bright-red);
     background-color: var(--clr-very-light-gray);
 }
 
@@ -396,10 +396,6 @@ p {
 /* BOTTOM CALL TO ACTION STYLES */
 
 #bottom-cta {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
     margin-top: 2.5rem;
     padding: 5rem 1.75rem;
     background-color: var(--clr-bright-red);
@@ -408,16 +404,112 @@ p {
     background-position: top 60% left;
 }
 
-#bottom-cta > h2 {
+.cta-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+#bottom-cta > .cta-wrapper > h2 {
     font-size: 2.25rem;
     text-align: center;
     color: var(--clr-very-light-gray);
     line-height: 1.35;
 }
 
-#bottom-cta > button:last-child {
+#bottom-cta > .cta-wrapper > button:last-child {
     color: var(--clr-bright-red);
     background-color: var(--clr-very-light-gray);
+}
+
+/* FOOTER SECTION STYLES */
+
+#footer {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    color: var(--clr-very-light-gray);
+    background-color: var(--clr-very-dark-blue);
+    padding: 3rem 1.25rem;
+}
+
+/* EMAIL FORM STYLES */
+
+.email-form {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.email-form > input:first-child {
+    padding: 0.65rem 1rem;
+    padding-left: 1.25rem;
+    border-radius: 2rem;
+    border: none;
+    font-size: 0.6875rem;
+    flex-grow: 1;
+}
+
+.email-form > input:first-child::placeholder {
+    color: var(--clr-dark-grayish-blue);
+}
+
+.submit-btn {
+    font-size: 0.6875rem;
+    font-weight: var(--fw-bold);
+    color: var(--clr-very-light-gray);
+    text-transform: uppercase;
+    background-color: var(--clr-bright-red);
+    padding: 0.65rem 1.5rem;
+    border-radius: 2rem;
+}
+
+/* FOOTER LINKS STYLES */
+
+.footer-links-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer-links-right-wrapper,
+.footer-links-left-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.footer-link {
+    font-size: 0.8125rem;
+    text-transform: capitalize;
+    flex-shrink: 1;
+}
+
+
+/* SOCIAL LINKS STYLES */
+
+.social-media-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.social-media-link > img {
+    width: 1.75rem;
+}
+
+.footer-logo-link {
+    align-self: center;
+}
+
+img.footer-logo {
+    width: 100%;
+    max-width: 10rem;
+}
+
+.copyright-text {
+    font-size: 0.6875rem;
+    color: var(--clr-dark-grayish-blue);
+    text-align: center;
 }
 
 /* ATTRIBUTION STYLES */

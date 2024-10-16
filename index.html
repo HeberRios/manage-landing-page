@@ -203,24 +203,36 @@
         </main>
 
         <section id="bottom-cta">
-            <h2>Simplify how your team works today.</h2>
-            <button class="btn cta-btn">Get Started</button>
+            <div class="cta-wrapper">
+                <h2>Simplify how your team works today.</h2>
+                <button class="btn cta-btn">Get Started</button>
+            </div>
         </section>
 
         <footer id="footer">
-            <form id="email-updates-form">
-                <input type="email" name="email" id="email" />
+            <form id="email-updates-form" class="email-form">
+                <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    placeholder="Updates in your inbox..."
+                />
                 <button id="submit-email" class="btn submit-btn">Go</button>
             </form>
 
             <div class="footer-links-container">
-                <a href="#" class="footer-link">home</a>
-                <a href="#" class="footer-link">pricing</a>
-                <a href="#" class="footer-link">products</a>
-                <a href="#" class="footer-link">about us</a>
-                <a href="#" class="footer-link">careers</a>
-                <a href="#" class="footer-link"> community </a>
-                <a href="#" class="footer-link">privacy policy</a>
+                <div class="footer-links-left-wrapper">
+                    <a href="#" class="footer-link">home</a>
+                    <a href="#" class="footer-link">pricing</a>
+                    <a href="#" class="footer-link">products</a>
+                    <a href="#" class="footer-link">about us</a>
+                </div>
+
+                <div class="footer-links-right-wrapper">
+                    <a href="#" class="footer-link">careers</a>
+                    <a href="#" class="footer-link"> community </a>
+                    <a href="#" class="footer-link">privacy policy</a>
+                </div>
             </div>
 
             <div class="social-media-container">
@@ -260,11 +272,13 @@
                 </a>
             </div>
 
-            <img
-                src="./assets/images/logo.svg"
-                alt="4 dots in the vertices of a square followed by the word manage"
-                class="footer-logo"
-            />
+            <a href="#" class="footer-logo-link">
+                <img
+                    src="./assets/images/logo-white.svg"
+                    alt="4 dots in the vertices of a square followed by the word manage"
+                    class="footer-logo"
+                />
+            </a>
 
             <small class="copyright-text">
                 Copyright <span id="year">2020</span>. All Rights Reserved.
