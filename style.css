@@ -125,7 +125,7 @@ h6 {
 body {
     font-family: var(--ff-regular);
     color: var(--clr-dark-blue);
-    background-color: var(--clr-very-light-gray);
+    background-color: #fff;
 }
 
 ul {
@@ -292,6 +292,7 @@ p {
     align-items: center;
     gap: 1rem;
     background-color: var(--clr-very-pale-red);
+    border-radius: 2rem 0 0 2rem;
 }
 
 .feature-wrapper > p {
@@ -313,6 +314,82 @@ p {
 
 .title-wrapper > h3 {
     font-size: 0.8125rem;
+}
+
+/* TESTIMONIALS SECTION STYLES */
+
+#testimonials {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2.5rem;
+}
+
+#testimonials > h2 {
+    font-size: 1.6875rem;
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.testimonials-container {
+    margin-bottom: 0.5rem;
+}
+
+.testimonial-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--clr-very-light-gray);
+    padding: 2rem 1.5rem;
+    padding-top: 3.5rem;
+    display: none;
+}
+
+.testimonial-card.selected {
+    display: flex;
+}
+
+.testimonial-author {
+    font-size: 0.875rem;
+    color: var(--clr-dark-blue);
+    font-weight: var(--fw-bold);
+}
+
+.testimonial-body {
+    font-size: 0.75rem;
+    line-height: 1.75;
+}
+
+.client-image {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 4rem;
+}
+
+.carousel-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.375rem;
+    margin-top: 1.25rem;
+}
+
+.carousel-btn {
+    width: 0.375rem;
+    height: 0.375rem;
+    border-radius: 50%;
+    border: 1px solid var(--clr-bright-red);
+    background-color: var(--clr-very-light-gray);
+}
+
+.carousel-btn.selected {
+    background-color: var(--clr-bright-red);
+}
+
+#testimonials > button:last-child {
+    margin-top: 3rem;
+    align-self: center;
 }
 
 /* ATTRIBUTION STYLES */
