@@ -338,6 +338,7 @@ p {
     position: relative;
     display: flex;
     flex-direction: column;
+    gap: 1rem;
     background-color: var(--clr-very-light-gray);
     padding: 2rem 1.5rem;
     padding-top: 3.5rem;
@@ -390,6 +391,32 @@ p {
 #testimonials > button:last-child {
     margin-top: 3rem;
     align-self: center;
+}
+
+/* BOTTOM CALL TO ACTION STYLES */
+
+#bottom-cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+    padding: 5rem 1.75rem;
+    background-color: var(--clr-bright-red);
+    background-image: url("./assets/images/bg-simplify-section-mobile.svg");
+    background-repeat: no-repeat;
+    background-position: top 60% left;
+}
+
+#bottom-cta > h2 {
+    font-size: 2.25rem;
+    text-align: center;
+    color: var(--clr-very-light-gray);
+}
+
+#bottom-cta > button:last-child {
+    color: var(--clr-bright-red);
+    background-color: var(--clr-very-light-gray);
 }
 
 /* ATTRIBUTION STYLES */
