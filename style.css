@@ -149,7 +149,8 @@ p {
 .section-container {
     max-width: 75rem;
     margin: 0 auto;
-    padding: 0 1.25rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
 }
 
 .btn {
@@ -229,11 +230,13 @@ p {
 #hero {
     display: flex;
     flex-direction: column-reverse;
+    align-items: center;
     gap: 1.25rem;
     margin-top: 2.5rem;
 }
 
 .hero-text-container {
+    max-width: 28.125rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -241,7 +244,7 @@ p {
 }
 
 .hero-text-container > h1 {
-    font-size: 2.25rem;
+    font-size: clamp(2.25rem, 5dvw, 2.75rem);
     line-height: 1.25;
     text-align: center;
 }
@@ -437,7 +440,8 @@ p {
     gap: 2.5rem;
     color: var(--clr-very-light-gray);
     background-color: var(--clr-very-dark-blue);
-    padding: 3rem 1.25rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
 }
 
 /* EMAIL FORM STYLES */
@@ -534,6 +538,14 @@ img.footer-logo {
 }
 
 @media (min-width: 48rem) {
+    .section-container,
+    #footer {
+        padding-left: 2.25rem;
+        padding-right: 2.25rem;
+    }
+
+    /* HEADER SECTION */
+
     .nav-menu-container {
         display: flex;
         flex-direction: row;
@@ -552,5 +564,28 @@ img.footer-logo {
 
     .mobile-menu-btn {
         display: none;
+    }
+
+    /* HERO SECTION */
+    #hero {
+        flex-direction: row;
+    }
+
+    #hero > * {
+        flex-grow: 1;
+    }
+
+    .hero-text-container {
+        align-items: start;
+        gap: 1.25rem;
+    }
+
+    .hero-text-container > h1,
+    .hero-text-container > p {
+        text-align: left;
+    }
+
+    .hero-text-container > p {
+        width: 85%;
     }
 }
