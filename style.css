@@ -264,19 +264,20 @@ p {
 }
 
 .manage-introduction-container {
+    max-width: 28.125rem;
     display: flex;
     flex-direction: column;
     gap: 1rem;
 }
 
 .manage-introduction-container > h2 {
-    font-size: 1.75rem;
+    font-size: clamp(1.75rem, 3.5dvw, 2.25rem);
     line-height: 1.5;
     text-align: center;
 }
 
 .manage-introduction-container > p {
-    font-size: 0.875rem;
+    font-size: clamp(0.875rem, 1.75dvw, 1rem);
     line-height: 1.75;
 }
 
@@ -306,7 +307,7 @@ p {
 
 .feature-wrapper > p {
     text-align: left;
-    font-size: 0.75rem;
+    font-size: clamp(0.75rem, 1.5dvw, 0.875rem);
     line-height: 1.75;
 }
 
@@ -322,7 +323,7 @@ p {
 }
 
 .title-wrapper > h3 {
-    font-size: 0.8125rem;
+    font-size: clamp(0.8125rem, 1.5dvw, 0.9375rem);
 }
 
 /* TESTIMONIALS SECTION STYLES */
@@ -587,5 +588,45 @@ img.footer-logo {
 
     .hero-text-container > p {
         width: 85%;
+    }
+
+    .hero-illustration-container {
+        display: flex;
+        justify-content: end;
+    }
+
+    /* MANAGE INTRODUCTION */
+
+    #manage-introduction {
+        flex-direction: row;
+        gap: 4rem;
+    }
+
+    .manage-introduction-container {
+        align-self: start;
+        gap: 1.5rem;
+    }
+
+    .manage-introduction-container > h2,
+    .manage-introduction-container > p {
+        text-align: left;
+    }
+
+    .manage-features-container {
+        gap: 2.5rem;
+    }
+
+    .feature-wrapper > p {
+        padding-left: 4.4375rem;
+    }
+
+    .title-wrapper {
+        background-color: unset;
+    }
+}
+
+@media (min-width: 64rem) {
+    #manage-introduction {
+        gap: 10rem;
     }
 }
