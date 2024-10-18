@@ -335,12 +335,14 @@ p {
 }
 
 #testimonials > h2 {
-    font-size: 1.6875rem;
+    font-size: clamp(1.6875rem, 3.5dvw, 2.25rem);
     text-align: center;
     margin-bottom: 5rem;
 }
 
 .testimonials-container {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
     margin-bottom: 0.5rem;
 }
 
@@ -623,10 +625,39 @@ img.footer-logo {
     .title-wrapper {
         background-color: unset;
     }
+
+    /* TESTIMONIALS CONTAINER */
+
+    #testimonials {
+        margin: 5rem 0;
+    }
+
+    .testimonials-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        justify-items: center;
+        gap: 1.5rem;
+        overflow-x: scroll;
+        padding: 2.5rem 0 1rem 0;
+    }
+
+    .testimonial-card {
+        min-width: 450px;
+        max-width: 550px;
+        display: flex;
+    }
+
+    .carousel-nav {
+        display: none;
+    }
 }
 
 @media (min-width: 64rem) {
     #manage-introduction {
         gap: 10rem;
+    }
+
+    #testimonials {
+        margin: 10rem 0;
     }
 }
