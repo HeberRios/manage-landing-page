@@ -126,6 +126,11 @@ body {
     font-family: var(--ff-regular);
     color: var(--clr-dark-blue);
     background-color: #fff;
+    background-image: url("./assets/images/bg-tablet-pattern.svg"),
+        url("./assets/images/bg-tablet-pattern.svg");
+    background-repeat: no-repeat;
+    background-size: 28.125rem, 21.875rem;
+    background-position: top -5rem right -7.5rem, top 22.5% right -10rem;
 }
 
 ul {
@@ -445,7 +450,7 @@ p {
 }
 
 .footer-wrapper {
-    max-width: 575px;
+    max-width: 35.9375rem;
     display: flex;
     flex-direction: column;
     gap: 2.5rem;
@@ -545,6 +550,11 @@ img.footer-logo {
 }
 
 @media (min-width: 48rem) {
+    body {
+        background-size: 65%;
+        background-position: top -5rem right -7.5rem, top 45% left -15rem;
+    }
+
     .section-container {
         padding-left: 2.25rem;
         padding-right: 2.25rem;
@@ -563,6 +573,7 @@ img.footer-logo {
         gap: 0;
         flex-grow: 1;
         padding: 0;
+        background-color: unset;
     }
 
     .nav-menu-list {
@@ -649,8 +660,8 @@ img.footer-logo {
     }
 
     .testimonial-card {
-        min-width: 450px;
-        max-width: 550px;
+        min-width: 28.125rem;
+        max-width: 34.375rem;
         display: flex;
     }
 
@@ -660,6 +671,11 @@ img.footer-logo {
 }
 
 @media (min-width: 64rem) {
+    body {
+        background-size: 37.5rem;
+        background-position: top -5rem right 0, top 55% left -15rem;
+    }
+
     #manage-introduction {
         gap: 10rem;
     }
@@ -705,7 +721,7 @@ img.footer-logo {
     }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 75rem) {
     .cta-wrapper {
         flex-direction: row;
         justify-content: space-between;
