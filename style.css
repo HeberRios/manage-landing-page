@@ -438,13 +438,17 @@ p {
 /* FOOTER SECTION STYLES */
 
 #footer {
-    display: flex;
-    flex-direction: column;
-    gap: 2.5rem;
     color: var(--clr-very-light-gray);
     background-color: var(--clr-very-dark-blue);
     padding-top: 3rem;
     padding-bottom: 3rem;
+}
+
+.footer-wrapper {
+    max-width: 575px;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
 }
 
 /* EMAIL FORM STYLES */
@@ -541,13 +545,16 @@ img.footer-logo {
 }
 
 @media (min-width: 48rem) {
-    .section-container,
-    #footer {
+    .section-container {
         padding-left: 2.25rem;
         padding-right: 2.25rem;
     }
 
     /* HEADER SECTION */
+
+    .page-logo {
+        max-height: unset;
+    }
 
     .nav-menu-container {
         display: flex;
@@ -659,6 +666,42 @@ img.footer-logo {
 
     #testimonials {
         margin: 10rem 0;
+    }
+
+    #footer {
+        padding: 4rem 0;
+    }
+
+    .footer-wrapper {
+        max-width: 75rem;
+        display: grid;
+        grid-template-areas:
+            "logo links links form"
+            "social links links copy";
+        row-gap: 4rem;
+    }
+
+    .footer-logo-link {
+        grid-area: logo;
+    }
+
+    .footer-links-container {
+        grid-area: links;
+    }
+
+    .email-form {
+        grid-area: form;
+    }
+
+    .social-media-container {
+        grid-area: social;
+        justify-content: space-between;
+    }
+
+    .copyright-text {
+        grid-area: copy;
+        justify-self: end;
+        align-self: end;
     }
 }
 
