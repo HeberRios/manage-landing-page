@@ -684,6 +684,11 @@ img.footer-logo {
         margin: 10rem 0;
     }
 
+    #bottom-cta {
+        background-image: url("./assets/images/bg-simplify-section-desktop.svg");
+        background-position: top 50% left 35%;
+    }
+
     #footer {
         padding: 4rem 0;
     }
@@ -725,6 +730,11 @@ img.footer-logo {
     .cta-wrapper {
         flex-direction: row;
         justify-content: space-between;
+    }
+
+    #bottom-cta {
+        background-size: 100%;
+        background-position: top 75% left 17rem;
     }
 
     #bottom-cta > .cta-wrapper > h2 {
