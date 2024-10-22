@@ -217,10 +217,6 @@ p {
     font-weight: var(--fw-bold);
 }
 
-.nav-link {
-    font-size: clamp(0.75rem, 1.5dvw, 1.125rem);
-}
-
 .cta-btn {
     background-color: var(--clr-bright-red);
     color: var(--clr-very-light-gray);
@@ -228,6 +224,21 @@ p {
     border-radius: 3rem;
     font-size: clamp(0.75rem, 1.5dvw, 1rem);
     font-weight: var(--fw-bold);
+}
+
+.mobile-menu-btn {
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: transparent;
+    transition: all 0.4s;
+}
+
+.mobile-menu-btn:hover {
+    scale: 1.125;
+}
+
+button.mobile-menu-btn.active > img.nav-menu-btn-icon {
+    content: url("./assets/images/icon-close.svg");
 }
 
 /* HERO SECTION STYLES */
@@ -581,6 +592,10 @@ img.footer-logo {
         justify-content: center;
         gap: 1.5rem;
         flex-grow: 1;
+    }
+
+    .nav-link {
+        font-size: clamp(0.75rem, 1.5dvw, 1.125rem);
     }
 
     .mobile-menu-btn {
