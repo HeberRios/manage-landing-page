@@ -661,3 +661,15 @@ img.footer-logo {
         margin: 10rem 0;
     }
 }
+
+@media (min-width: 1200px) {
+    .cta-wrapper {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    #bottom-cta > .cta-wrapper > h2 {
+        width: 40%;
+        text-align: left;
+    }
+}
