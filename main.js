@@ -1,16 +1,21 @@
+"use strict";
+
 // SELECTING ELEMENTS
 
 const mobileNavMenuBtn = document.querySelector("#mobile-nav-btn");
 const navMenu = document.querySelector(".nav-menu-container");
 const testimonialCards = document.querySelectorAll(".testimonial-card");
 const carouselBtns = document.querySelectorAll(".carousel-btn");
+const emailInput = document.querySelector("#email");
+const errorMessage = document.querySelector(".error-msg");
+const emailForm = document.querySelector("#email-updates-form");
+const submitBtn = document.querySelector("#submit-email");
+
+// EMAIL REGEX
+const emailRegEx =
+    /^([-!#-'*+/-9=?A-Z^-~]+(\.[-!#-'*+/-9=?A-Z^-~]+)*|"([]!#-[^-~ \t]|(\\[\t -~]))+")@([-!#-'*+/-9=?A-Z^-~]+(\.[-!#-'*+/-9=?A-Z^-~]+)+|\[[\t -Z^-~]*])$/;
 
 // FUNCTIONS
-
-function initializeCarousel() {
-    testimonialCards[1].classList.add("selected");
-    carouselBtns[1].classList.add("selected");
-}
 
 function toggleMobileNavMenu() {
     navMenu.classList.toggle("active");
@@ -20,6 +25,30 @@ function toggleMobileNavMenu() {
 function removeActiveClass() {
     navMenu.classList.remove("active");
     mobileNavMenuBtn.classList.remove("active");
+}
+
+function initializeCarousel() {
+    testimonialCards[1].classList.add("selected");
+    carouselBtns[1].classList.add("selected");
+}
+
+function emailValidation() {
+    if (emailInput.value === "") {
+        errorMessage.textContent = "Please enter an email";
+        errorMessage.classList.add("error-active");
+        emailInput.classList.add("error-active");
+        return false;
+    } else if (emailRegEx.test(emailInput.value)) {
+        errorMessage.textContent = "Valid email";
+        errorMessage.classList.remove("error-active");
+        emailInput.classList.remove("error-active");
+        return true;
+    } else {
+        errorMessage.textContent = "Please enter a valid email";
+        errorMessage.classList.add("error-active");
+        emailInput.classList.add("error-active");
+        return false;
+    }
 }
 
 // EVENT LISTENERS
@@ -51,3 +80,22 @@ carouselBtns.forEach(function (button, i) {
 // SELECT 1 TESTIMONIAL AND 1 BTN AT PAGE LOAD
 
 initializeCarousel();
+
+// EVENT LISTENER FOR THE EMAIL INPUT
+
+emailInput.addEventListener("input", emailValidation);
+
+// PRESSING THE SUBMIT BTN
+submitBtn.addEventListener("click", function () {
+    if (emailValidation()) {
+        emailInput.value = "";
+        errorMessage.textContent = "Email registered, thanks!!!";
+    } else {
+    }
+});
+
+// PREVENT THE DEFAULT BEHAVIOR OF THE FORM
+
+emailForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+});
