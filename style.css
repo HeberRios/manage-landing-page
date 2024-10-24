@@ -136,6 +136,12 @@ body {
     background-position: top -5rem right -7.5rem, top 22.5% right -10rem;
 }
 
+div.attribution {
+    color: var(--clr-very-light-gray);
+    background-color: var(--clr-very-dark-blue);
+    padding-bottom: 2rem;
+}
+
 ul {
     list-style: none;
 }
