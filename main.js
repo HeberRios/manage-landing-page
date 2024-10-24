@@ -10,12 +10,18 @@ const emailInput = document.querySelector("#email");
 const errorMessage = document.querySelector(".error-msg");
 const emailForm = document.querySelector("#email-updates-form");
 const submitBtn = document.querySelector("#submit-email");
+const copyrightYear = document.querySelector("#year");
+const currentYear = new Date().getFullYear();
 
 // EMAIL REGEX
 const emailRegEx =
     /^([-!#-'*+/-9=?A-Z^-~]+(\.[-!#-'*+/-9=?A-Z^-~]+)*|"([]!#-[^-~ \t]|(\\[\t -~]))+")@([-!#-'*+/-9=?A-Z^-~]+(\.[-!#-'*+/-9=?A-Z^-~]+)+|\[[\t -Z^-~]*])$/;
 
 // FUNCTIONS
+
+function setCurrentYear() {
+    copyrightYear.textContent = currentYear;
+}
 
 function toggleMobileNavMenu() {
     navMenu.classList.toggle("active");
@@ -99,3 +105,7 @@ submitBtn.addEventListener("click", function () {
 emailForm.addEventListener("submit", function (event) {
     event.preventDefault();
 });
+
+// SET THE COPYRIGHT YEAR TO CURRENT YEAR
+
+setCurrentYear();
